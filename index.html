@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/DELL/Downloads/index_v3_final.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujjwal Thapliyal | Data Scientist</title>
+    <style>
+        :root {
+            --ios-bg: #F0F4F8;
+            --ios-card: rgba(255, 255, 255, 0.75);
+            --ios-label-primary: #1E2530;
+            --ios-label-secondary: #4A5568;
+            --ios-gray-labels: #718096;
+            --ios-green: #2F855A;
+            --ios-blue: #3182CE;
+            --ios-separator: rgba(0, 0, 0, 0.05);
+            --timeline-track: #CBD5E0;
+            --panel-inner-bg: rgba(247, 250, 252, 0.5);
+            --pill-bg: rgba(237, 242, 247, 0.8);
+            --badge-bg: #EBF8FF;
+            --badge-border: #BEE3F8;
+            --pop-shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.04), 0 10px 20px -10px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+            --pop-shadow-sm: 0 8px 16px -4px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            --mesh-1: rgba(219, 234, 254, 0.6);
+            --mesh-2: rgba(243, 232, 255, 0.5);
+            --mesh-3: rgba(220, 252, 231, 0.4);
+            --mesh-4: rgba(238, 242, 246, 0.7);
+        }
+
+        [data-theme="dark"] {
+            --ios-bg: #0F131A;
+            --ios-card: rgba(22, 29, 41, 0.75);
+            --ios-label-primary: #E2E8F0;
+            --ios-label-secondary: #A0AEC0;
+            --ios-gray-labels: #4A5568;
+            --ios-green: #48BB78;
+            --ios-blue: #4299E1;
+            --ios-separator: rgba(255, 255, 255, 0.05);
+            --timeline-track: #2D3748;
+            --panel-inner-bg: rgba(15, 20, 30, 0.5);
+            --pill-bg: rgba(26, 32, 44, 0.8);
+            --badge-bg: rgba(66, 153, 225, 0.08);
+            --badge-border: rgba(66, 153, 225, 0.2);
+            --pop-shadow-lg: 0 30px 60px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+            --pop-shadow-sm: 0 12px 24px -4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+            --mesh-1: rgba(26, 44, 78, 0.4);
+            --mesh-2: rgba(39, 26, 62, 0.35);
+            --mesh-3: rgba(18, 41, 33, 0.3);
+            --mesh-4: rgba(13, 17, 23, 0.8);
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        body {
+            background-color: var(--ios-bg);
+            background-image:
+                radial-gradient(at 10% 10%, var(--mesh-1) 0px, transparent 55%),
+                radial-gradient(at 90% 15%, var(--mesh-2) 0px, transparent 50%),
+                radial-gradient(at 85% 85%, var(--mesh-3) 0px, transparent 55%),
+                radial-gradient(at 15% 90%, var(--mesh-4) 0px, transparent 50%);
+            background-size: 160% 160%;
+            animation: waveGradient 40s ease infinite;
+            background-attachment: fixed;
+            color: var(--ios-label-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            min-height: 100vh;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        @keyframes waveGradient {
+            0% { background-position: 0% 40%; }
+            50% { background-position: 100% 60%; }
+            100% { background-position: 0% 40%; }
+        }
+
+        .sf-icon { display: inline-block; width: 16px; height: 16px; background-size: contain; background-repeat: no-repeat; background-position: center; vertical-align: middle; flex-shrink: 0; }
+        .sf-person { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%233182CE" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>'); }
+        .sf-terminal { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%233182CE" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3"/></svg>'); }
+        .sf-checkmark { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%2348BB78" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>'); }
+        .sf-envelope { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%233182CE" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>'); }
+        .sf-link { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%234A5568" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>'); }
+        .sf-trophy { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%23DD6B20" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 14zm0 0zm0 0l-6.16-3.422a12.083 12.083 0 00-.665 6.479A11.952 11.952 0 0112 14z"/></svg>'); }
+        .sf-video { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%233182CE" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>'); }
+        .sf-chart { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%233182CE" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10a2 2 0 01-2 2h-2a2 2 0 01-2-2zm0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>'); }
+        .sf-doc { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%23FFFFFF" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>'); }
+
+        .portfolio-container { display: flex; justify-content: center; width: 100%; min-height: 100vh; }
+        .portfolio-wrapper { max-width: 1200px; width: 100%; display: grid; grid-template-columns: 350px 1fr; gap: 40px; padding: 40px 20px; }
+
+        .system-control-header { grid-column: span 2; display: flex; justify-content: flex-end; align-items: center; padding-bottom: 10px; height: 40px; }
+        .theme-switch-wrapper { display: flex; align-items: center; gap: 10px; background: var(--ios-card); padding: 6px 14px; border-radius: 30px; box-shadow: var(--pop-shadow-sm); border: 1px solid var(--ios-separator); transition: background 0.3s, border-color 0.3s; }
+        .theme-switch-label { font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--ios-label-secondary); }
+        .toggle-track { position: relative; width: 44px; height: 24px; background-color: #E5E5EA; border-radius: 15px; cursor: pointer; transition: background-color 0.3s; }
+        [data-theme="dark"] .toggle-track { background-color: var(--ios-blue); }
+        .toggle-thumb { position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; background-color: #FFFFFF; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.15); transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        [data-theme="dark"] .toggle-thumb { transform: translateX(20px); }
+
+        .left-sticky-column { height: fit-content; position: sticky; top: 20px; display: flex; flex-direction: column; gap: 24px; }
+
+        .ios-list-group { background: var(--ios-card); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-radius: 20px; padding: 28px; box-shadow: var(--pop-shadow-sm); border: 1px solid var(--ios-separator); position: relative; transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease; will-change: transform, box-shadow; }
+        .ios-list-group:hover { transform: translateY(-4px); box-shadow: var(--pop-shadow-lg); border-color: rgba(49, 130, 206, 0.25); }
+
+        .telemetry-widget-title { font-size: 0.75rem; font-weight: 700; color: var(--ios-gray-labels); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 16px; }
+        .matrix-cluster-title { font-size: 0.72rem; font-weight: 700; color: var(--ios-blue); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; margin-top: 14px; }
+        .matrix-cluster-title:first-of-type { margin-top: 0; }
+
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+        .ios-pill { font-size: 0.78rem; font-weight: 600; background: var(--pill-bg); color: var(--ios-label-primary); padding: 6px 12px; border-radius: 10px; border: 1px solid var(--ios-separator); cursor: pointer; transition: background 0.2s, color 0.2s, transform 0.2s; }
+        .ios-pill:hover { background: var(--ios-blue); color: #ffffff; transform: scale(1.05); }
+
+        .right-scroll-column { display: flex; flex-direction: column; gap: 32px; }
+
+        .ios-card-large-profile { background: var(--ios-card); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-radius: 24px; padding: 48px; border: 1px solid var(--ios-separator); box-shadow: var(--pop-shadow-lg); transition: background 0.3s, border-color 0.3s; }
+
+        .role-status-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--badge-bg); color: var(--ios-blue); border: 1px solid var(--badge-border); padding: 6px 16px; border-radius: 30px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; transition: background 0.3s, border-color 0.3s; }
+        .role-tag-dot { width: 8px; height: 8px; border-radius: 50%; background-color: var(--ios-green); animation: pulseActive 2s infinite; }
+
+        @keyframes pulseActive {
+            0% { transform: scale(0.9); opacity: 0.6; }
+            50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 0 4px rgba(72, 187, 120, 0.3); }
+            100% { transform: scale(0.9); opacity: 0.6; }
+        }
+
+        .metrics-proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+
+        .pipeline-flow-diagram { display: flex; align-items: center; justify-content: space-between; background: var(--panel-inner-bg); border: 1px solid var(--ios-separator); padding: 14px; border-radius: 12px; margin: 20px 0; transition: background 0.3s, border-color 0.3s; }
+        .diagram-node { background: var(--ios-card); border: 1px solid var(--ios-separator); padding: 6px 12px; border-radius: 8px; font-size: 0.76rem; font-weight: 700; color: var(--ios-label-primary); text-align: center; box-shadow: var(--pop-shadow-sm); flex-grow: 1; max-width: 30%; transition: background 0.3s, border-color 0.3s; }
+        .diagram-arrow { font-size: 0.8rem; color: var(--ios-blue); font-weight: 700; padding: 0 6px; user-select: none; }
+
+        .ios-section-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+        .ios-section-header { font-size: 0.88rem; font-weight: 700; text-transform: uppercase; color: var(--ios-gray-labels); letter-spacing: 1px; }
+
+        .ledger-filter-pills { display: flex; gap: 6px; background: var(--pill-bg); padding: 4px; border-radius: 12px; border: 1px solid var(--ios-separator); transition: background 0.3s, border-color 0.3s; }
+        .filter-btn { font-size: 0.78rem; font-weight: 600; color: var(--ios-label-secondary); background: transparent; border: none; padding: 6px 14px; border-radius: 9px; cursor: pointer; transition: background 0.2s, color 0.2s, box-shadow 0.2s; }
+        .filter-btn.active { background: var(--ios-card); color: var(--ios-blue); box-shadow: var(--pop-shadow-sm); }
+
+        .timeline-container { position: relative; padding-left: 86px; transition: opacity 0.3s, transform 0.3s; will-change: opacity, transform; }
+        .timeline-container::before { content: ''; position: absolute; left: 31px; top: 14px; bottom: 0; width: 2px; background-color: var(--timeline-track); opacity: 0.4; transition: background-color 0.3s; }
+        .timeline-container:last-of-type::before { display: none; }
+
+        .timeline-node-brand { position: absolute; left: 0; top: 8px; width: 64px; height: 64px; border-radius: 16px; background: #FFFFFF; border: 1px solid rgba(0, 0, 0, 0.04); box-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02); z-index: 2; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .brand-logo-text { font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 800; font-size: 1rem; color: #C53030; letter-spacing: -0.5px; text-align: center; line-height: 1; }
+        .project-node-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+
+        .timeline-content-card { background: var(--ios-card); backdrop-filter: blur(30px); border-radius: 24px; padding: 32px; border: 1px solid var(--ios-separator); box-shadow: var(--pop-shadow-sm); margin-bottom: 32px; transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease; will-change: transform, box-shadow; }
+        .timeline-content-card:hover { transform: translateY(-4px); box-shadow: var(--pop-shadow-lg); border-color: rgba(49, 130, 206, 0.2); }
+
+        .timeline-header-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; flex-wrap: wrap; gap: 10px; }
+        .timeline-title { font-size: 1.55rem; font-weight: 700; color: var(--ios-label-primary); letter-spacing: -0.5px; }
+        .timeline-meta-subtext { font-size: 1rem; color: var(--ios-blue); font-weight: 600; margin-bottom: 16px; }
+        .timeline-date-badge { font-size: 0.82rem; font-weight: 600; background: var(--pill-bg); padding: 6px 14px; border-radius: 20px; color: var(--ios-label-secondary); transition: background 0.3s, color 0.3s; }
+        .timeline-tech-category { font-size: 0.76rem; font-weight: 700; color: var(--ios-gray-labels); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 20px; display: block; }
+
+        .image-cloned-callout { background: linear-gradient(90deg, rgba(235,248,255,0.7) 0%, rgba(247,250,252,0.4) 100%); border-left: 4px solid var(--ios-blue); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; display: flex; align-items: center; gap: 12px; transition: background 0.3s; }
+        [data-theme="dark"] .image-cloned-callout { background: linear-gradient(90deg, rgba(43,108,176,0.15) 0%, rgba(20,26,38,0.4) 100%); }
+        .callout-text { font-size: 1rem; font-weight: 700; color: var(--ios-label-primary); }
+
+        .ios-step-cell { display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-start; }
+        .step-circle-icon { width: 24px; height: 24px; border-radius: 50%; background: var(--pill-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; transition: background 0.3s; }
+        .step-txt p { font-size: 1.05rem; color: var(--ios-label-secondary); line-height: 1.6; }
+
+        .ios-action-button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+        .ios-action-button { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: var(--pill-bg); color: var(--ios-blue); font-size: 0.94rem; font-weight: 600; padding: 14px; border-radius: 12px; border: 1px solid transparent; cursor: pointer; text-decoration: none; transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+        .ios-action-button:hover { background: var(--ios-card); border-color: rgba(49, 130, 206, 0.3); box-shadow: var(--pop-shadow-sm); transform: translateY(-1px); }
+        .ios-action-button.primary { background: var(--ios-blue); color: #ffffff; }
+        .ios-action-button.primary:hover { background: #2B6CB0; box-shadow: 0 4px 14px rgba(49, 130, 206, 0.3); }
+
+        .profile-socials-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+        .social-btn-cell { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px; background: var(--pill-bg); border-radius: 12px; font-size: 0.9rem; font-weight: 600; text-decoration: none; color: var(--ios-label-secondary); border: 1px solid transparent; transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s, box-shadow 0.2s; }
+        .social-btn-cell:hover { background: var(--ios-card); color: var(--ios-blue); transform: translateY(-2px); box-shadow: var(--pop-shadow-sm); border-color: rgba(49, 130, 206, 0.2); }
+
+        .highlight-card { border-color: var(--ios-blue) !important; box-shadow: var(--pop-shadow-lg) !important; }
+
+        /* RESPONSIVE DESIGN UPDATES */
+        @media (max-width: 1024px) {
+            .portfolio-wrapper { grid-template-columns: 280px 1fr; gap: 24px; }
+        }
+
+        @media (max-width: 868px) {
+            .portfolio-wrapper { grid-template-columns: 1fr; padding: 24px 16px; gap: 28px; }
+            .system-control-header { grid-column: span 1; }
+            .left-sticky-column { position: relative; top: 0; }
+            .timeline-container { padding-left: 0; }
+            .timeline-container::before { display: none; }
+            .timeline-node-brand { position: relative; margin-bottom: 12px; top: 0; }
+            .timeline-header-row { flex-direction: column; }
+            .metrics-proof-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 580px) {
+            .metrics-proof-grid { grid-template-columns: 1fr; gap: 12px; }
+            .profile-socials-row { grid-template-columns: 1fr; gap: 8px; }
+            .ios-action-button-row { grid-template-columns: 1fr; gap: 8px; }
+            .ios-card-large-profile { padding: 28px 20px; }
+            .timeline-content-card { padding: 24px 16px; }
+            .ledger-filter-pills { width: 100%; justify-content: space-between; overflow-x: auto; }
+            .filter-btn { flex-grow: 1; text-align: center; padding: 6px 10px; }
+            .cta-wrapper { flex-direction: column; align-items: stretch !important; text-align: center; padding: 24px !important; }
+            .cta-buttons { width: 100%; justify-content: center; }
+            .cta-buttons a { flex-grow: 1; text-align: center; justify-content: center; }
+        }
+    </style>
+</head>
+<body data-theme="light">
+
+    <div class="portfolio-container">
+        <div class="portfolio-wrapper">
+
+            <header class="system-control-header">
+                <div class="theme-switch-wrapper">
+                    <span class="theme-switch-label" id="theme-text">Light</span>
+                    <div class="toggle-track" onclick="toggleSystemTheme()">
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+            </header>
+
+            <aside class="left-sticky-column">
+
+       <div class="ios-list-group">
+
+                <!-- Profile Image -->
+                <div style="display: flex; justify-content: center; margin: 12px 0;">
+                    <img src="./Ujjwal Thapliyal _ Data Scientist_files/m.jpeg" alt="Profile Photo" style="
+                            width: 100%;
+                            height: 100%;
+                           border-radius: 16px;
+                            object-fit: cover;
+                            border: 2px solid rgba(255,255,255,0.1);
+                        ">
+                </div>
+            </div>
+
+                <div class="ios-list-group">
+                    <div class="telemetry-widget-title">Education</div>
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
+                        <div>
+                            <div style="font-size: 0.95rem; font-weight: 700;">MCA</div>
+                            <div style="font-size: 0.82rem; color: var(--ios-gray-labels);">SGRR University · 2024–2026</div>
+                        </div>
+                        <div>
+                    <div style="font-size: 0.95rem; font-weight: 700;">
+                        <a href="https://digitalskills.iitmpravartak.org.in/verify/cert/VB5tJ5jqT6ZgLk0g" target="_blank" style="color: inherit; text-decoration: none;">
+                            Master Data Science <span style="font-size: 0.8rem;">↗</span>
+                        </a>
+                    </div>
+
+                    <div style="font-size: 0.82rem; color: var(--ios-gray-labels);">
+                        IIT Madras Pravartak · GUVI · HCL ·2024-2025
+                    </div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.95rem; font-weight: 700;">BSc IT</div>
+                            <div style="font-size: 0.82rem; color: var(--ios-gray-labels);">SGRR University · 2021–2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ios-list-group">
+                    <div class="telemetry-widget-title">Skills</div>
+
+                    <div class="matrix-cluster-title">Data &amp; Analytics</div>
+                    <div class="tag-cloud">
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">Python</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">SQL</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">Pandas</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">NumPy</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">SciPy</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">statsmodels</span>
+                    </div>
+
+                    <div class="matrix-cluster-title">Machine Learning &amp; NLP</div>
+                    <div class="tag-cloud">
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">Scikit-learn</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">XGBoost</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">DistilBERT</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">Transformers</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">TF-IDF</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">VADER</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">PELT</span>
+                    </div>
+
+                    <div class="matrix-cluster-title">Visualization</div>
+                    <div class="tag-cloud">
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">Matplotlib</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">Seaborn</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">Plotly</span>
+                    </div>
+
+                    <div class="matrix-cluster-title">Deployment &amp; MLOps</div>
+                    <div class="tag-cloud">
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">FastAPI</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">Docker</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">Streamlit</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;ops&#39;)" onmouseout="clearHighlight()">MLflow</span>
+                        <span class="ios-pill" onmouseover="mapHighlight(&#39;nlp&#39;)" onmouseout="clearHighlight()">Hugging Face</span>
+                    </div>
+                </div>
+
+                <div class="ios-list-group">
+                    <div class="telemetry-widget-title">Certifications</div>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; gap: 12px; align-items: flex-start;">
+                            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(49,130,206,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="sf-icon sf-trophy" style="filter: hue-rotate(200deg);"></i>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.92rem; font-weight: 700; color: var(--ios-label-primary);">Master Data Science</div>
+                                <div style="font-size: 0.78rem; color: var(--ios-blue); font-weight: 600;">IIT Madras · Guvi HCL</div>
+                                <div style="font-size: 0.75rem; color: var(--ios-gray-labels);">2025</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: flex-start;">
+                            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(72,187,120,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="sf-icon sf-checkmark"></i>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.92rem; font-weight: 700; color: var(--ios-label-primary);">AI / ML Internship</div>
+                                <div style="font-size: 0.78rem; color: var(--ios-blue); font-weight: 600;">TechnicalOne · Remote</div>
+                                <div style="font-size: 0.75rem; color: var(--ios-gray-labels);">Jan – Feb 2026</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <main class="right-scroll-column">
+
+                <section class="ios-card-large-profile">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+                        <h1 style="font-size: 3rem; font-weight: 800; letter-spacing: -1.5px; color: var(--ios-label-primary); line-height: 1.1; margin: 0;">Ujjwal Thapliyal</h1>
+                        <div class="role-status-tag" style="align-self: center;">
+                            <div class="role-tag-dot"></div>
+                            <span>Open to DS Roles</span>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 1.05rem; color: var(--ios-label-secondary); line-height: 1.75; margin: 0 0 32px 0;">
+                        I build ML systems that ship — not just notebooks that impress in demos. During my MCA I went from full-stack Python and JavaScript to fine-tuning transformer models, wrapping them in FastAPI, and deploying to Hugging Face Spaces via Docker. My most recent work applies product analytics techniques — sentiment shifts, changepoint detection, statistical tests — to real Swiggy and CRED user reviews. I hold an <strong>IIT Madras Master Data Science certification</strong> and I'm looking for a role where the work is measured in metrics, not slides.
+                    </p>
+
+                    <div class="metrics-proof-grid">
+                        <div style="background: rgba(255,255,255,0.4); box-shadow: var(--pop-shadow-sm); border: 1px solid rgba(0,0,0,0.02); border-radius: 16px; padding: 24px 16px; text-align: center;">
+                            <div style="font-size: 2.2rem; font-weight: 800; color: var(--ios-blue); letter-spacing: -1px; margin-bottom: 4px;">96.9%</div>
+                            <div style="font-size: 0.72rem; font-weight: 700; color: var(--ios-gray-labels); text-transform: uppercase; letter-spacing: 0.5px;">NLP Accuracy</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.4); box-shadow: var(--pop-shadow-sm); border: 1px solid rgba(0,0,0,0.02); border-radius: 16px; padding: 24px 16px; text-align: center;">
+                            <div style="font-size: 2.2rem; font-weight: 800; color: var(--ios-blue); letter-spacing: -1px; margin-bottom: 4px;">110K+</div>
+                            <div style="font-size: 0.72rem; font-weight: 700; color: var(--ios-gray-labels); text-transform: uppercase; letter-spacing: 0.5px;">Records Modeled</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.4); box-shadow: var(--pop-shadow-sm); border: 1px solid rgba(0,0,0,0.02); border-radius: 16px; padding: 24px 16px; text-align: center;">
+                            <div style="font-size: 2.2rem; font-weight: 800; color: var(--ios-blue); letter-spacing: -1px; margin-bottom: 4px;">R² .85</div>
+                            <div style="font-size: 0.72rem; font-weight: 700; color: var(--ios-gray-labels); text-transform: uppercase; letter-spacing: 0.5px;">XGBoost Score</div>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--panel-inner-bg); border: 1px solid var(--ios-separator); border-radius: 18px; padding: 28px; text-align: left; margin-bottom: 32px;">
+                        <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 18px; color: var(--ios-label-primary);">What I bring</h3>
+
+                        <div style="display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start;">
+                            <div style="background: rgba(72,187,120,0.1); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;"><i class="sf-icon sf-checkmark"></i></div>
+                            <p style="font-size: 0.98rem; color: var(--ios-label-secondary); line-height: 1.55;"><strong>Shipped end-to-end:</strong> Took a DistilBERT classifier from raw data to a live Hugging Face deployment — fine-tuning, FastAPI, Docker — all in a single two-month internship.</p>
+                        </div>
+                        <div style="display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start;">
+                            <div style="background: rgba(72,187,120,0.1); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;"><i class="sf-icon sf-checkmark"></i></div>
+                            <p style="font-size: 0.98rem; color: var(--ios-label-secondary); line-height: 1.55;"><strong>Iterates with evidence:</strong> Improved FlipSatisfy classifier from 95.6% → 96.9% accuracy through feature and hyperparameter tuning — tracked every run in MLflow, not guesswork.</p>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: flex-start;">
+                            <div style="background: rgba(72,187,120,0.1); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;"><i class="sf-icon sf-checkmark"></i></div>
+                            <p style="font-size: 0.98rem; color: var(--ios-label-secondary); line-height: 1.55;"><strong>Thinks in product questions:</strong> Applied PELT changepoint detection and VADER sentiment to Swiggy and CRED reviews to find when user satisfaction structurally broke — validated with Mann-Whitney U tests.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-socials-row">
+                        <a href="mailto:ujjwalthapliyal4@gmail.com" class="social-btn-cell">
+                            <i class="sf-icon sf-envelope"></i><span>Email</span>
+                        </a>
+                        <a href="https://github.com/UjjwalThapliyal123" target="_blank" class="social-btn-cell">
+                            <i class="sf-icon sf-link"></i><span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/ujjwal-thapliyal" target="_blank" class="social-btn-cell">
+                            <i class="sf-icon sf-link"></i><span>LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <a href="https://drive.google.com/file/d/1nYTcSkN6S7dlUmVXwifnmPBVoKAOUeCW/view?usp=sharing" target="_blank" class="ios-action-button primary">
+                        <i class="sf-icon sf-doc"></i><span>Download Resume</span>
+                    </a>
+                </section>
+
+                <section>
+                    <div class="ios-section-header" style="margin-bottom: 24px;">Work Experience</div>
+
+                    <div class="timeline-container">
+                        <div class="timeline-node-brand">
+                            <div class="brand-logo-text">tech<br><span style="color:#1A202C; font-size:0.75rem;">one</span></div>
+                        </div>
+                        <div class="timeline-content-card">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-title">TechnicalOne</h3>
+                                <span class="timeline-date-badge">Jan 2026 – Feb 2026</span>
+                            </div>
+                            <div class="timeline-meta-subtext">AI / ML Intern · Remote</div>
+                            <span class="timeline-tech-category">NLP · DistilBERT · FastAPI · Docker · Hugging Face</span>
+
+                            <div class="ios-step-cell">
+                                <div class="step-circle-icon" style="background:transparent;"><span style="color:var(--ios-gray-labels); font-size:1.2rem;">•</span></div>
+                                <div class="step-txt">
+                                    <p>Built a fake news detection system end-to-end: scraped and cleaned a multi-source dataset, fine-tuned DistilBERT for binary classification, and wrapped the inference layer in a FastAPI app containerized with Docker.</p>
+                                </div>
+                            </div>
+                            <div class="ios-step-cell">
+                                <div class="step-circle-icon" style="background:transparent;"><span style="color:var(--ios-gray-labels); font-size:1.2rem;">•</span></div>
+                                <div class="step-txt">
+                                    <p>Handled large-scale text preprocessing pipelines — tokenization, de-duplication, and label balancing across 70K+ records — then deployed the final model to Hugging Face Spaces for live inference.</p>
+                                </div>
+                            </div>
+
+                            <div class="image-cloned-callout">
+                                <i class="sf-icon sf-trophy"></i>
+                                <div class="callout-text">Production deployment live on Hugging Face Spaces — full pipeline from raw data to public API in 8 weeks.</div>
+                            </div>
+
+                            <div class="pipeline-flow-diagram">
+                                <div class="diagram-node">Raw Text</div>
+                                <div class="diagram-arrow">➔</div>
+                                <div class="diagram-node" style="color:var(--ios-blue);">DistilBERT</div>
+                                <div class="diagram-arrow">➔</div>
+                                <div class="diagram-node">Live API</div>
+                            </div>
+
+                            <div style="display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap;">
+                                <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">DISTILBERT</span>
+                                <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">FASTAPI</span>
+                                <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">DOCKER</span>
+                                <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">HUGGING FACE</span>
+                            </div>
+
+                            <a href="https://huggingface.co/spaces/abc22u59na/fake-news-detector" target="_blank" class="ios-action-button" style="margin-top: 20px;">
+                                <i class="sf-icon sf-link"></i><span>Run Live ↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="ios-section-header-row">
+                        <div class="ios-section-header">Projects</div>
+                        <div class="ledger-filter-pills">
+                            <button class="filter-btn active" onclick="filterLedger(&#39;all&#39;, this)">All</button>
+                            <button class="filter-btn" onclick="filterLedger(&#39;nlp&#39;, this)">NLP</button>
+                            <button class="filter-btn" onclick="filterLedger(&#39;ops&#39;, this)">Analytics &amp; MLOps</button>
+                        </div>
+                    </div>
+
+                    <div id="ledger-wrapper">
+
+                        <div class="timeline-container" data-category="nlp ops">
+                            <div class="timeline-node-brand">
+                                <div class="project-node-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#48BB78" stroke-width="2.5" style="width:26px; height:26px;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-header-row">
+                                    <h3 class="timeline-title">FlipSatisfy — Customer Satisfaction Classifier</h3>
+                                    <span class="timeline-date-badge">Jul 2025 – Aug 2025</span>
+                                </div>
+                                <span class="timeline-tech-category">NLP · TF-IDF · FastAPI · Docker · MLflow</span>
+
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-person"></i></div>
+                                    <div class="step-txt">
+                                        <p><strong>The problem:</strong> Given 85,907 raw Flipkart customer support messages, can we predict satisfaction outcome fast enough to flag escalations before they turn into 1-star reviews?</p>
+                                    </div>
+                                </div>
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-terminal"></i></div>
+                                    <div class="step-txt">
+                                        <p>Built a TF-IDF + classifier pipeline, iterated from 95.6% to <strong>96.9% accuracy</strong> through feature engineering and hyperparameter tuning — every experiment logged in MLflow. Wrapped the final model in FastAPI and containerized with Docker.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pipeline-flow-diagram">
+                                    <div class="diagram-node">85K Reviews</div>
+                                    <div class="diagram-arrow">➔</div>
+                                    <div class="diagram-node" style="color:var(--ios-blue);">Random Forest, ADA Boost , KNN</div>
+                                    <div class="diagram-arrow">➔</div>
+                                    <div class="diagram-node">Docker API</div>
+                                </div>
+
+                                <div class="image-cloned-callout">
+                                    <i class="sf-icon sf-chart"></i>
+                                    <div class="callout-text">96.9% accuracy — up from 95.6% baseline, with every iteration tracked in MLflow.</div>
+                                </div>
+
+                                <div class="ios-action-button-row" style="grid-template-columns: 1fr;">
+                                    <a href="https://github.com/UjjwalThapliyal123/Flipkart-s-Customers_Survey" target="_blank" class="ios-action-button primary">
+                                        <i class="sf-icon sf-link"></i><span>Source Code ↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-container" data-category="ops">
+                            <div class="timeline-node-brand">
+                                <div class="project-node-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#E05A00" stroke-width="2.5" style="width:26px; height:26px;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-header-row">
+                                    <h3 class="timeline-title">Swiggy &amp; CRED — Review Sentiment Analysis</h3>
+                                    <span class="timeline-date-badge">Mar 2026 – Present</span>
+                                </div>
+                                <span class="timeline-tech-category">Product Analytics · VADER · PELT · TF-IDF · Statistical Tests</span>
+
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-chart"></i></div>
+                                    <div class="step-txt">
+                                        <p><strong>The question:</strong> When did Swiggy and CRED users start getting unhappy — and what were they complaining about? Analyzed Google Play Store reviews to find structural sentiment shifts using <strong>PELT changepoint detection</strong>.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pipeline-flow-diagram">
+                                    <div class="diagram-node">Play Store Reviews</div>
+                                    <div class="diagram-arrow">➔</div>
+                                    <div class="diagram-node" style="color:var(--ios-blue);">VADER + PELT</div>
+                                    <div class="diagram-arrow">➔</div>
+                                    <div class="diagram-node">Keyword Shifts</div>
+                                </div>
+
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-terminal"></i></div>
+                                    <div class="step-txt">
+                                        <p>Scored sentiment with VADER, detected change points in the sentiment time series with PELT, then extracted top complaint keywords per window using TF-IDF. Validated drops with Mann-Whitney U tests — not just eyeballing charts.</p>
+                                    </div>
+                                </div>
+
+                                <div class="image-cloned-callout">
+                                    <i class="sf-icon sf-trophy"></i>
+                                    <div class="callout-text">Pinpointed statistically significant rating drops correlated with specific feature rollout windows.</div>
+                                </div>
+
+                                <div style="display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap;">
+                                    <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">VADER</span>
+                                    <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">PELT</span>
+                                    <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">TF-IDF</span>
+                                    <span class="ios-pill" style="font-size:0.72rem; color:var(--ios-blue); border-color:rgba(49,130,206,0.2);">MANN-WHITNEY U</span>
+                                </div>
+
+                                <a href="https://github.com/UjjwalThapliyal123/Swiggy-Cred-Product-health-Analysis" target="_blank" class="ios-action-button" style="margin-top: 20px;">
+                                    <i class="sf-icon sf-link"></i><span>Source Code ↗</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-container" data-category="ops">
+                            <div class="timeline-node-brand">
+                                <div class="project-node-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#DD6B20" stroke-width="2.5" style="width:26px; height:26px;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-header-row">
+                                    <h3 class="timeline-title">Flight Price &amp; Passenger Satisfaction</h3>
+                                    <span class="timeline-date-badge">Jun 2025 – Jul 2025</span>
+                                </div>
+                                <span class="timeline-tech-category">XGBoost · Scikit-learn · MLflow · Streamlit</span>
+
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-terminal"></i></div>
+                                    <div class="step-txt">
+                                        <p><strong>The dataset:</strong> 110K+ flight and passenger records. <strong>The goal:</strong> predict ticket price and passenger satisfaction score accurately enough to be useful to a pricing or CX team.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pipeline-flow-diagram">
+                                    <div class="diagram-node">110K+ Records</div>
+                                    <div class="diagram-arrow">➔</div>
+                                    <div class="diagram-node" style="color:var(--ios-blue);">XGBoost + MLflow</div>
+                                    <div class="diagram-arrow">➔</div>
+                                    <div class="diagram-node">R² = 0.85</div>
+                                </div>
+
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-checkmark"></i></div>
+                                    <div class="step-txt">
+                                        <p>Ran EDA on 110K records, engineered features for route, timing, and class variables, then trained and tuned XGBoost with MLflow experiment tracking. Built a Streamlit dashboard to make results navigable without code.</p>
+                                    </div>
+                                </div>
+
+                                <div class="image-cloned-callout">
+                                    <i class="sf-icon sf-trophy"></i>
+                                    <div class="callout-text">R² = 0.85 on price prediction — 23% reduction in RMSE vs. baseline linear model.</div>
+                                </div>
+
+                                <a href="https://github.com/UjjwalThapliyal123/Flight-and-Customer-predictions" target="_blank" class="ios-action-button" style="margin-top: 12px;">
+                                    <i class="sf-icon sf-link"></i><span>Source Code ↗</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-container" data-category="nlp">
+                            <div class="timeline-node-brand">
+                                <div class="project-node-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#3182CE" stroke-width="2.5" style="width:26px; height:26px;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-header-row">
+                                    <h3 class="timeline-title">Job Recommendation Engine</h3>
+                                    <span class="timeline-date-badge">Sep 2025 – Oct 2025</span>
+                                </div>
+                                <span class="timeline-tech-category">NLP · TF-IDF · Cosine Similarity · Streamlit</span>
+
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-person"></i></div>
+                                    <div class="step-txt">
+                                        <p>Built a resume-to-job matching system: takes a raw resume as input, vectorizes it with TF-IDF, and ranks job descriptions by cosine similarity — surfacing the top matches in a Streamlit UI.</p>
+                                    </div>
+                                </div>
+                                <div class="ios-step-cell">
+                                    <div class="step-circle-icon"><i class="sf-icon sf-terminal"></i></div>
+                                    <div class="step-txt">
+                                        <p>The matching runs in under a second for a corpus of hundreds of job descriptions — fast enough that a user gets live feedback as they update their resume text.</p>
+                                    </div>
+                                </div>
+
+                                <div class="image-cloned-callout">
+                                    <i class="sf-icon sf-trophy"></i>
+                                    <div class="callout-text">Sub-second matching across a full job corpus — interactive Streamlit demo with live similarity scores.</div>
+                                </div>
+
+                                <div class="ios-action-button-row">
+                                    <a href="https://www.linkedin.com/posts/ujjwal-thapliyal_python-machinelearning-nlp-activity-7457255256398413824-OwRw?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAEgUiPcBRc856wIEQPnXjnFVMWJ9T1K22Rg" target="_blank" class="ios-action-button primary">
+                                        <i class="sf-icon sf-video"></i><span>Watch Demo ↗</span>
+                                    </a>
+                                    <a href="https://github.com/UjjwalThapliyal123/Job-Recommendation-system" target="_blank" class="ios-action-button">
+                                        <i class="sf-icon sf-link"></i><span>Source Code ↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <div style="margin-top: 4px;">
+                    <h4 style="font-size: 0.75rem; font-weight: 700; color: #718096; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; padding-left: 4px;">Achievement</h4>
+                    <div style="background: var(--ios-card); backdrop-filter: blur(30px); border: 1px solid var(--ios-separator); box-shadow: var(--pop-shadow-sm); border-radius: 20px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; transition: background 0.3s, border-color 0.3s;">
+                        <div style="color: #DD6B20; font-size: 1.25rem; flex-shrink: 0; padding-top: 2px;">
+                            <i class="sf-icon sf-trophy"></i>
+                        </div>
+                        <div style="flex-grow: 1; text-align: left;">
+                            <h5 style="font-size: 1.05rem; font-weight: 700; color: var(--ios-label-primary); margin: 0 0 6px 0; line-height: 1.4;">
+                                Best Startup Idea <span style="font-weight: 400; color: #718096; margin: 0 4px;">—</span> SGRR Innovation Seminar (IIC)
+                            </h5>
+                            <p style="font-size: 0.92rem; color: var(--ios-label-secondary); margin: 0; line-height: 1.5;">
+                               Pitched an AI-powered document intelligence system designed to analyze complex bureaucratic PDFs and expose hidden clauses. Recognized for commercial viability, societal impact, and a scalable LLM/NLP pipeline. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 16px; margin-bottom: 20px;">
+                    <div class="cta-wrapper" style="background: var(--ios-card); backdrop-filter: blur(30px); border: 1px solid var(--ios-separator); box-shadow: var(--pop-shadow-lg); border-radius: 28px; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; transition: background 0.3s, border-color 0.3s;">
+                        <div style="flex: 1; min-width: 280px;">
+                            <h3 style="font-size: 1.65rem; font-weight: 800; color: var(--ios-label-primary); margin: 0 0 8px 0; letter-spacing: -0.5px;">Let's work on something real.</h3>
+                            <p style="font-size: 0.98rem; color: var(--ios-label-secondary); margin: 0; line-height: 1.5; max-width: 480px;">
+                                If your team has data problems that need a DS who ships — not just experiments — I'd like to talk.
+                            </p>
+                        </div>
+                        <div class="cta-buttons" style="display: flex; gap: 12px; align-items: center; flex-shrink: 0; flex-wrap: wrap;">
+                            <a href="mailto:ujjwalthapliyal4@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; background: var(--ios-label-primary); color: var(--ios-bg); text-decoration: none; padding: 14px 24px; font-size: 0.92rem; font-weight: 600; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.2s, color 0.2s;">
+                                <span>Email me</span>
+                            </a>
+                            <a href="https://linkedin.com/in/ujjwal-thapliyal" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: var(--ios-blue); color: #FFFFFF; text-decoration: none; padding: 14px 24px; font-size: 0.92rem; font-weight: 600; border-radius: 14px; box-shadow: 0 4px 12px rgba(49,130,206,0.2); transition: background 0.2s, box-shadow 0.2s;">
+                                <i class="sf-icon sf-link"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function toggleSystemTheme() {
+            const body = document.body;
+            const themeText = document.getElementById('theme-text');
+            if (body.getAttribute('data-theme') === 'light') {
+                body.setAttribute('data-theme', 'dark');
+                themeText.innerText = 'Dark';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeText.innerText = 'Light';
+            }
+        }
+
+        function filterLedger(category, buttonEl) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            buttonEl.classList.add('active');
+            document.querySelectorAll('#ledger-wrapper .timeline-container').forEach(item => {
+                const cats = item.getAttribute('data-category').split(' ');
+                if (category === 'all' || cats.includes(category)) {
+                    item.style.display = 'block';
+                    setTimeout(() => { 
+                        item.style.opacity = '1'; 
+                        item.style.transform = 'translateY(0)'; 
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(15px)';
+                    setTimeout(() => { 
+                        item.style.display = 'none'; 
+                    }, 250);
+                }
+            });
+        }
+
+        function mapHighlight(targetId) {
+            if (targetId === 'all') return;
+            document.querySelectorAll(`.timeline-container[data-category*="${targetId}"] .timeline-content-card`).forEach(card => card.classList.add('highlight-card'));
+        }
+
+        function clearHighlight() {
+            document.querySelectorAll('.timeline-content-card').forEach(card => card.classList.remove('highlight-card'));
+        }
+    </script>
+
+</body></html>
