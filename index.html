@@ -574,54 +574,44 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="timeline-content-card">
-                                <div class="timeline-header-row">
-                                    <h3 class="timeline-title">Flight Price &amp; Passenger Satisfaction</h3>
-                                    <span class="timeline-date-badge">Jun 2025 – Jul 2025</span>
-                                </div>
-                                <span class="timeline-tech-category">XGBoost · Scikit-learn · MLflow · Streamlit</span>
+<div class="timeline-content-card">
+    <div class="timeline-header-row">
+        <h3 class="timeline-title">Credit Card Fraud Detection</h3>
+        <span class="timeline-date-badge">Jun 2026</span>
+    </div>
+    <span class="timeline-tech-category">Python · PySpark · XGBoost · SMOTE · SHAP</span>
 
-                                <div class="ios-step-cell">
-                                    <div class="step-circle-icon"><i class="sf-icon sf-terminal"></i></div>
-                                    <div class="step-txt">
-                                        <p><strong>The dataset:</strong> 110K+ flight and passenger records. <strong>The goal:</strong> predict ticket price and passenger satisfaction score accurately enough to be useful to a pricing or CX team.</p>
-                                    </div>
-                                </div>
+    <div class="ios-step-cell">
+        <div class="step-circle-icon"><i class="sf-icon sf-terminal"></i></div>
+        <div class="step-txt">
+            <p><strong>The dataset:</strong> 284K+ financial transactions[cite: 1]. <strong>The goal:</strong> mitigate extreme class imbalance to build a highly scalable, auditable, and production-ready fraud detection engine[cite: 1].</p>
+        </div>
+    </div>
 
-                                <div class="pipeline-flow-diagram">
-                                    <div class="diagram-node">110K+ Records</div>
-                                    <div class="diagram-arrow">➔</div>
-                                    <div class="diagram-node" style="color:var(--ios-blue);">XGBoost + MLflow</div>
-                                    <div class="diagram-arrow">➔</div>
-                                    <div class="diagram-node">R² = 0.85</div>
-                                </div>
+    <div class="pipeline-flow-diagram">
+        <div class="diagram-node">284K+ Transactions</div>
+        <div class="diagram-arrow">➔</div>
+        <div class="diagram-node" style="color:var(--ios-blue);">PySpark + XGBoost</div>
+        <div class="diagram-arrow">➔</div>
+        <div class="diagram-node">AUC-ROC ~0.98</div>
+    </div>
 
-                                <div class="ios-step-cell">
-                                    <div class="step-circle-icon"><i class="sf-icon sf-checkmark"></i></div>
-                                    <div class="step-txt">
-                                        <p>Ran EDA on 110K records, engineered features for route, timing, and class variables, then trained and tuned XGBoost with MLflow experiment tracking. Built a Streamlit dashboard to make results navigable without code.</p>
-                                    </div>
-                                </div>
+    <div class="ios-step-cell">
+        <div class="step-circle-icon"><i class="sf-icon sf-checkmark"></i></div>
+        <div class="step-txt">
+            <p>Built an end-to-end 7-stage PySpark pipeline leveraging MLlib preprocessing, designed to easily scale to 10x larger datasets[cite: 1]. Addressed severe class imbalance using SMOTE and XGBoost class weighting, and integrated SHAP for transparent, enterprise-grade model explainability[cite: 1].</p>
+        </div>
+    </div>
 
-                                <div class="image-cloned-callout">
-                                    <i class="sf-icon sf-trophy"></i>
-                                    <div class="callout-text">R² = 0.85 on price prediction — 23% reduction in RMSE vs. baseline linear model.</div>
-                                </div>
+    <div class="image-cloned-callout">
+        <i class="sf-icon sf-trophy"></i>
+        <div class="callout-text">AUC-ROC ~0.98 and AUC-PR ~0.85 — delivering exceptional precision on heavily skewed transaction records[cite: 1].</div>
+    </div>
 
-                                <a href="https://github.com/UjjwalThapliyal123/Flight-and-Customer-predictions" target="_blank" class="ios-action-button" style="margin-top: 12px;">
-                                    <i class="sf-icon sf-link"></i><span>Source Code ↗</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline-container" data-category="nlp">
-                            <div class="timeline-node-brand">
-                                <div class="project-node-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#3182CE" stroke-width="2.5" style="width:26px; height:26px;">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
-                                    </svg>
-                                </div>
-                            </div>
+    <a href="https://github.com/UjjwalThapliyal123/Credit-Card-Fraud-Detection" target="_blank" class="ios-action-button" style="margin-top: 12px;">
+        <i class="sf-icon sf-link"></i><span>Source Code ↗</span>
+    </a>
+</div>
                             <div class="timeline-content-card">
                                 <div class="timeline-header-row">
                                     <h3 class="timeline-title">Job Recommendation Engine</h3>
