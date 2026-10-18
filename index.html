@@ -33,13 +33,13 @@
 :root[data-theme="dark"]{
   --bg:#000; --card:#1c1c1e; --card2:#2c2c2e; --label:#f5f5f7; --label2:#a1a1a6; --sep:rgba(235,235,245,.14);
   --blue:#0a84ff; --blue-soft:rgba(10,132,255,.16); --green:#30d158; --orange:#ff9f0a; --indigo:#7d7aff;
-  --mono:invert(1); --glass:rgba(28,28,30,.72); --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
+  --mono:brightness(0) invert(1); --glass:rgba(28,28,30,.72); --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#000; --card:#1c1c1e; --card2:#2c2c2e; --label:#f5f5f7; --label2:#a1a1a6; --sep:rgba(235,235,245,.14);
     --blue:#0a84ff; --blue-soft:rgba(10,132,255,.16); --green:#30d158; --orange:#ff9f0a; --indigo:#7d7aff;
-    --mono:invert(1); --glass:rgba(28,28,30,.72); --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
+    --mono:brightness(0) invert(1); --glass:rgba(28,28,30,.72); --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
   }
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -704,10 +704,12 @@ footer{text-align:center;color:var(--label2);font-size:13px;padding:36px 0 48px}
   if (!/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) { var kb = document.querySelector('nav kbd'); if (kb) kb.textContent = 'Ctrl K'; }
 
   // Real logos (brand icons load from a CDN; if one fails, the emoji or plain text stays)
-  var SI = 'https://cdn.simpleicons.org/';
-  var LI = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg';
+  var SI = 'assets/icons/';
+  var LI = 'assets/icons/linkedin';
+  var MONO = ['github','numpy','pandas','modelcontextprotocol'];
   function put(el, src, mode, size){
-    var im = new Image(); im.alt = ''; im.decoding = 'async'; if (/\/github$/.test(src)) im.className = 'mono';
+    if (!/\.svg$/.test(src)) src += '.svg';
+    var im = new Image(); im.alt = ''; im.decoding = 'async'; if (mode !== 'tile' && MONO.indexOf(src.split('/').pop().replace('.svg','')) > -1) im.className = 'mono';
     im.onload = function(){
       if (mode === 'tile') { el.classList.add('logo-on'); var w = Math.round((el.offsetWidth || 38) * (size || .58)); im.width = w; im.height = w; el.appendChild(im); }
       else { im.width = im.height = size || 16; el.insertBefore(im, el.firstChild); }
@@ -719,12 +721,12 @@ footer{text-align:center;color:var(--label2);font-size:13px;padding:36px 0 48px}
     im.onload = function(){ var c = document.createElement('span'); c.className = 'cl'; c.appendChild(im); el.insertBefore(c, el.firstChild); };
     im.src = file;
   }
-  var TAGS = {'n8n':'n8n','Zoho CRM / Books API':'zoho','Zoho Creator':'zoho','Gemini':'googlegemini','Google Gemini':'googlegemini','MCP':'modelcontextprotocol','Python':'python','Pandas':'pandas','NumPy':'numpy','Excel':'microsoftexcel','Scikit-learn':'scikitlearn','PySpark MLlib':'apachespark','MLflow':'mlflow','DistilBERT':'huggingface','Transformers':'huggingface','Hugging Face':'huggingface','Hugging Face Spaces':'huggingface','FastAPI':'fastapi','Docker':'docker','Git':'git','Streamlit':'streamlit'};
+  var TAGS = {'n8n':'n8n','Zoho CRM / Books API':'zoho','Zoho Creator':'zoho','Gemini':'googlegemini','Google Gemini':'googlegemini','MCP':'modelcontextprotocol','Python':'python','Pandas':'pandas','NumPy':'numpy','Scikit-learn':'scikitlearn','PySpark MLlib':'apachespark','MLflow':'mlflow','DistilBERT':'huggingface','Transformers':'huggingface','Hugging Face':'huggingface','Hugging Face Spaces':'huggingface','FastAPI':'fastapi','Docker':'docker','Git':'git','Streamlit':'streamlit'};
   document.querySelectorAll('.sk .tag, .role .tags .tag').forEach(function(t){ var k = TAGS[t.textContent.trim()]; if (k) put(t, SI + k, 'inline', 14); });
   [['n8n',null,'zoho','googlegemini']].forEach(function(l){ document.querySelectorAll('.notif .ico').forEach(function(el, i){ if (l[i]) put(el, SI + l[i], 'tile'); }); });
   var roles = document.querySelectorAll('.role');
-  [['n8n','zoho',null,'googlegemini'],['huggingface','docker']].forEach(function(l, r){ if (!roles[r]) return; roles[r].querySelectorAll('.row .ico').forEach(function(el, i){ if (l[i]) put(el, SI + l[i], 'tile'); }); });
-  var PROJ = {'Credit Card Fraud Detection':'apachespark','Swiggy and CRED Review Sentiment':'python','Fake News Detector':'huggingface','Job Recommendation Engine':'streamlit','FlipSatisfy Classifier':'mlflow'};
+  [['n8n','zoho','zoho','googlegemini'],['huggingface','docker']].forEach(function(l, r){ if (!roles[r]) return; roles[r].querySelectorAll('.row .ico').forEach(function(el, i){ if (l[i]) put(el, SI + l[i], 'tile'); }); });
+  var PROJ = {'Credit Card Fraud Detection':'apachespark','Swiggy and CRED Review Sentiment':'swiggy','Fake News Detector':'huggingface','Job Recommendation Engine':'streamlit','FlipSatisfy Classifier':'scikitlearn'};
   document.querySelectorAll('.proj').forEach(function(c){ var k = PROJ[c.querySelector('h3').textContent]; if (k) put(c.querySelector('.top .ico'), SI + k, 'tile'); });
   document.querySelectorAll('[data-logo]').forEach(function(b){ var k = b.getAttribute('data-logo'); put(b, k === 'linkedin' ? LI : SI + k, 'inline', 18); });
   // Company and university logos: add files to assets/logos/ and they appear automatically
